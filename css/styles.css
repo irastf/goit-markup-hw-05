@@ -356,7 +356,7 @@ img {
   
 }
 .customers-icon {
-  fill: current-color;
+  fill: currentColor;
 }
 .customers-link:hover,
 .customers-link:focus {
