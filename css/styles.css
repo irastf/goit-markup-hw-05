@@ -11,7 +11,7 @@
   --background-color-dark: #2e2f42;
   --border-btn: #e7e9fc;
   --color-icon-customers-border: #8e8f99;
-  /*--transition-duraction-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+  --transition-duraction-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -113,7 +113,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -121,10 +121,10 @@ img {
 }
 
 .current::after {
-  position: relative;
   width: 100%;
   content: '';
-  color: var(--secondary-text-color);  
+  color: var(--secondary-text-color);
+  position: absolute;
   left: 0;
   bottom: -1px;
   height: 4px;
@@ -198,6 +198,8 @@ img {
   letter-spacing: 0.04em;
   color: var(--text-color-theme-dark-secondary);
   background: var(--accent-color);
+
+  transition: background-color var(--transition-duraction-and-func);
 }
 .btn-order:hover,
 .btn-order:focus {
@@ -320,7 +322,7 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -348,10 +350,10 @@ img {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   color: var(--color-icon-customers-border);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: boder-color 250ms cubic-bezier(0.4, 0, 0.2, 1) color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon {
-  fill: currentColor;
+  fill: current-color;
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -407,7 +409,7 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)s;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-media-link:hover,
 .soc-media-link:focus {
@@ -448,6 +450,8 @@ img {
   letter-spacing: 0.04em;
   color: var(--accent-color);
   background-color: var(--background-color-light);
+
+  transition: color var(--transition-duraction-and-func), background-color var(--transition-duraction-and-func), border-color var(--transition-duraction-and-func), box-shadow var(--transition-duraction-and-func);
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -544,8 +548,8 @@ img {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--transition-duraction-and-func),
+  visibility var(--transition-duraction-and-func);
 }
 
 .modal {
@@ -558,7 +562,7 @@ img {
   background: #FCFCFC;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: trancform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duraction-and-func);
 }
 
 .modal-close-btn {
@@ -574,7 +578,7 @@ img {
   height: 24px;
   padding: 0;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duraction-and-func), border var(--transition-duraction-and-func);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -582,7 +586,7 @@ img {
 .modal-close-btn:focus {
   background-color: #404bbf;
   fill: #ffffff;
-transition: background-color 250ms , border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 border: none;
   }
 
