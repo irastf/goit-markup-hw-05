@@ -126,6 +126,7 @@ img {
   position: absolute;
   display: block;
   content: '';
+  color: #404bbf;
   background-color: var(--hover-focus-color);
   width: 100%;
   height: 4px;
